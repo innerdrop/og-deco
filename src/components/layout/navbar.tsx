@@ -6,8 +6,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+import { useCart } from "@/context/cart-context";
+
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { cartCount } = useCart();
 
     const navLinks = [
         { name: "Inicio", href: "/" },
@@ -21,11 +24,12 @@ export function Navbar() {
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-100 transition-all duration-300">
             <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 group">
-                    <div className="bg-olive text-white w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-xl group-hover:bg-olive-dark transition-colors">
-                        OG
-                    </div>
-                    <span className="font-serif font-bold text-xl text-stone-800 tracking-tight">OG Decoraciones</span>
+                <Link href="/" className="flex items-center gap-3 group">
+                    {/* Tried invert for contrast if logo is white. If logo is black, remove invert. */}
+                    <img src="/logo-full.png" alt="OG Decoraciones" className="h-10 w-10 object-cover rounded-full" />
+                    <span className="font-serif text-xl font-bold text-stone-800 tracking-wide">
+                        SG Decoraciones
+                    </span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -50,12 +54,14 @@ export function Navbar() {
                     <Link href="/cart">
                         <div className="relative text-stone-500 hover:text-olive transition-colors">
                             <ShoppingCart className="h-5 w-5" />
-                            <span className="absolute -top-1 -right-1 bg-olive text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">0</span>
+                            {cartCount > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-olive text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full animate-bounce-in">{cartCount}</span>
+                            )}
                         </div>
                     </Link>
 
                     <a
-                        href="https://wa.me/5492901123456"
+                        href="https://wa.me/5492901553173"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hidden md:block"
@@ -90,7 +96,7 @@ export function Navbar() {
                             </Link>
                         ))}
                         <a
-                            href="https://wa.me/5492901123456"
+                            href="https://wa.me/5492901553173"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-4"

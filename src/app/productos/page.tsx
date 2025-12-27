@@ -118,7 +118,7 @@ export default async function ShopPage({
                                 <p className="text-stone-500 font-serif text-lg">
                                     No encontramos productos con estos filtros.
                                 </p>
-                                <Link href="/shop">
+                                <Link href="/productos">
                                     <Button variant="link" className="text-olive mt-2">
                                         Limpiar filtros
                                     </Button>

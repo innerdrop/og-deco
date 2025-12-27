@@ -2,22 +2,27 @@ import type { NextAuthConfig } from "next-auth";
 
 export const authConfig = {
     pages: {
-        signIn: "/admin/login",
+        signIn: "/admin",
     },
     callbacks: {
         authorized({ auth, request: { nextUrl } }) {
             const isLoggedIn = !!auth?.user;
             const isOnAdmin = nextUrl.pathname.startsWith("/admin");
-            console.log("Middleware Auth Check:", { path: nextUrl.pathname, user: auth?.user, isLoggedIn });
 
-            // Allow access to login page
-            if (nextUrl.pathname === "/admin/login") return true;
+            // 1. If at root /admin
+            if (nextUrl.pathname === "/admin") {
+                // If logged in, go to dashboard
+                if (isLoggedIn) return Response.redirect(new URL("/admin/dashboard", nextUrl));
+                // If not logged in, allow access (so page.tsx renders login form)
+                return true;
+            }
 
-            // Restrict admin routes
+            // 2. If at other /admin routes (e.g. /admin/dashboard)
             if (isOnAdmin) {
                 if (isLoggedIn) return true;
-                return false; // Redirect to login
+                return false; // Redirects to signIn page (now /admin)
             }
+
             return true;
         },
     },

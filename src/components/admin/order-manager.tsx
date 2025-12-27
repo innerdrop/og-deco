@@ -53,63 +53,65 @@ export default function OrderManager({ orders }: { orders: Order[] }) {
             </div>
 
             <div className="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden">
-                <table className="w-full text-sm text-left">
-                    <thead className="bg-stone-50 text-stone-500 font-medium">
-                        <tr>
-                            <th className="px-6 py-4">ID Pedido</th>
-                            <th className="px-6 py-4">Fecha</th>
-                            <th className="px-6 py-4">Cliente</th>
-                            <th className="px-6 py-4">Total</th>
-                            <th className="px-6 py-4">Estado</th>
-                            <th className="px-6 py-4 text-right">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-stone-100">
-                        {orders.map((order) => (
-                            <tr key={order.id} className="hover:bg-stone-50/50">
-                                <td className="px-6 py-4 font-medium text-stone-900">
-                                    #{order.id.slice(-6).toUpperCase()}
-                                </td>
-                                <td className="px-6 py-4 text-stone-500">
-                                    {new Date(order.createdAt).toLocaleDateString()}
-                                </td>
-                                <td className="px-6 py-4">
-                                    {order.user?.name || order.user?.email || "Invitado"}
-                                </td>
-                                <td className="px-6 py-4 font-bold text-stone-700">
-                                    ${order.total.toLocaleString()}
-                                </td>
-                                <td className="px-6 py-4">
-                                    <span className={`px-2 py-1 rounded-full text-xs font-medium 
-                                        ${order.status === 'SHIPPED' ? 'bg-blue-50 text-blue-600' :
-                                            order.status === 'PENDING' ? 'bg-yellow-50 text-yellow-600' :
-                                                order.status === 'DELIVERED' ? 'bg-green-50 text-green-600' :
-                                                    order.status === 'CANCELLED' ? 'bg-red-50 text-red-600' : 'bg-gray-50 text-gray-600'
-                                        }`}>
-                                        {translateStatus(order.status)}
-                                    </span>
-                                </td>
-                                <td className="px-6 py-4 text-right">
-                                    <Button
-                                        size="icon"
-                                        variant="ghost"
-                                        className="h-8 w-8 text-stone-500 hover:text-olive"
-                                        onClick={() => setSelectedOrder(order)}
-                                    >
-                                        <Eye className="h-4 w-4" />
-                                    </Button>
-                                </td>
-                            </tr>
-                        ))}
-                        {orders.length === 0 && (
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm text-left whitespace-nowrap">
+                        <thead className="bg-stone-50 text-stone-500 font-medium">
                             <tr>
-                                <td colSpan={6} className="px-6 py-8 text-center text-stone-500">
-                                    No hay pedidos registrados.
-                                </td>
+                                <th className="px-6 py-4">ID Pedido</th>
+                                <th className="px-6 py-4">Fecha</th>
+                                <th className="px-6 py-4">Cliente</th>
+                                <th className="px-6 py-4">Total</th>
+                                <th className="px-6 py-4">Estado</th>
+                                <th className="px-6 py-4 text-right">Acciones</th>
                             </tr>
-                        )}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody className="divide-y divide-stone-100">
+                            {orders.map((order) => (
+                                <tr key={order.id} className="hover:bg-stone-50/50">
+                                    <td className="px-6 py-4 font-medium text-stone-900">
+                                        #{order.id.slice(-6).toUpperCase()}
+                                    </td>
+                                    <td className="px-6 py-4 text-stone-500">
+                                        {new Date(order.createdAt).toLocaleDateString()}
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        {order.user?.name || order.user?.email || "Invitado"}
+                                    </td>
+                                    <td className="px-6 py-4 font-bold text-stone-700">
+                                        ${order.total.toLocaleString()}
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <span className={`px-2 py-1 rounded-full text-xs font-medium 
+                                        ${order.status === 'SHIPPED' ? 'bg-blue-50 text-blue-600' :
+                                                order.status === 'PENDING' ? 'bg-yellow-50 text-yellow-600' :
+                                                    order.status === 'DELIVERED' ? 'bg-green-50 text-green-600' :
+                                                        order.status === 'CANCELLED' ? 'bg-red-50 text-red-600' : 'bg-gray-50 text-gray-600'
+                                            }`}>
+                                            {translateStatus(order.status)}
+                                        </span>
+                                    </td>
+                                    <td className="px-6 py-4 text-right">
+                                        <Button
+                                            size="icon"
+                                            variant="ghost"
+                                            className="h-8 w-8 text-stone-500 hover:text-olive"
+                                            onClick={() => setSelectedOrder(order)}
+                                        >
+                                            <Eye className="h-4 w-4" />
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
+                            {orders.length === 0 && (
+                                <tr>
+                                    <td colSpan={6} className="px-6 py-8 text-center text-stone-500">
+                                        No hay pedidos registrados.
+                                    </td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             {/* Order Details Modal */}

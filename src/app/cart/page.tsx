@@ -97,7 +97,7 @@ export default function CartPage() {
                         <ShoppingBag className="h-16 w-16 mx-auto text-stone-300 mb-4" />
                         <h2 className="text-xl font-serif font-bold text-stone-700 mb-2">Tu carrito está vacío</h2>
                         <p className="text-stone-500 mb-6">Parece que aún no has agregado nada.</p>
-                        <Link href="/shop">
+                        <Link href="/productos">
                             <Button className="bg-olive text-white">
                                 Ir al Catálogo
                             </Button>

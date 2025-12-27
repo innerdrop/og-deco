@@ -20,10 +20,10 @@ export function Footer() {
                     <div>
                         <h4 className="mb-4 font-semibold text-white">Categorías</h4>
                         <ul className="space-y-2 text-sm text-stone-300">
-                            <li><Link href="/shop?cat=cortinas" className="hover:text-white">Cortinas & Rollers</Link></li>
-                            <li><Link href="/shop?cat=pisos" className="hover:text-white">Pisos Flotantes</Link></li>
-                            <li><Link href="/shop?cat=plantas" className="hover:text-white">Plantas & Macetas</Link></li>
-                            <li><Link href="/shop?cat=textil" className="hover:text-white">Vajilla & Textil</Link></li>
+                            <li><Link href="/productos?cat=cortinas" className="hover:text-white">Cortinas & Rollers</Link></li>
+                            <li><Link href="/productos?cat=pisos" className="hover:text-white">Pisos Flotantes</Link></li>
+                            <li><Link href="/productos?cat=plantas" className="hover:text-white">Plantas & Macetas</Link></li>
+                            <li><Link href="/productos?cat=textil" className="hover:text-white">Vajilla & Textil</Link></li>
                         </ul>
                     </div>
 
@@ -46,7 +46,7 @@ export function Footer() {
                             </li>
                             <li className="flex items-center gap-2">
                                 <Phone className="h-4 w-4 shrink-0" />
-                                <span>+54 9 2901 123456</span>
+                                <span>+54 9 2901 553173</span>
                             </li>
                             <li className="flex items-center gap-2">
                                 <Mail className="h-4 w-4 shrink-0" />

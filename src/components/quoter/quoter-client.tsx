@@ -54,7 +54,7 @@ export default function QuoterClient({ categories, globalSettings }: { categorie
         const fabricName = fabrics.find(f => f.id === data.fabric)?.name;
         const roomName = environments.find(e => e.id === data.room)?.name || data.room;
         const text = `Hola! Hice una cotización en la web. Ambiente: ${roomName}, Medidas: ${data.width}x${data.height}cm, Tela: ${fabricName}. Precio estimado: $${price}. Quisiera coordinar una visita.`;
-        return `https://wa.me/5492901123456?text=${encodeURIComponent(text)}`;
+        return `https://wa.me/5492901553173?text=${encodeURIComponent(text)}`;
     };
 
     return (
@@ -95,19 +95,12 @@ export default function QuoterClient({ categories, globalSettings }: { categorie
                                             key={room.id}
                                             onClick={() => setData({ ...data, room: room.id })}
                                             className={cn(
-                                                "relative p-4 rounded-xl border-2 text-left transition-all hover:border-olive/50 overflow-hidden group h-32 flex flex-col justify-end",
+                                                "relative p-4 rounded-xl border-2 text-left transition-all hover:border-olive/50 overflow-hidden group min-h-[100px] flex flex-col justify-center items-center text-center",
                                                 data.room === room.id ? "border-olive bg-olive/5" : "border-stone-100 bg-stone-50"
                                             )}
                                         >
-                                            {room.image && (
-                                                <img
-                                                    src={room.image}
-                                                    alt={room.name}
-                                                    className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity z-0"
-                                                />
-                                            )}
-                                            <div className="relative z-10 bg-white/80 p-2 rounded backdrop-blur-sm">
-                                                <span className="font-medium text-stone-900 block">{room.name}</span>
+                                            <div className="relative z-10 p-2 rounded">
+                                                <span className="font-medium text-stone-900 block text-lg">{room.name}</span>
                                             </div>
                                         </button>
                                     ))}

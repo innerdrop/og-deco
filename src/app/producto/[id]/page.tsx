@@ -84,9 +84,16 @@ export default async function ProductPage({ params }: Props) {
                         <div className="space-y-4 pt-6 border-t border-stone-200">
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <AddToCartButton product={product} />
-                                <Button size="lg" variant="outline" className="flex-1 border-olive text-olive hover:bg-olive/10 h-14 text-lg">
-                                    <Phone className="mr-2 h-5 w-5" /> Consultar por WhatsApp
-                                </Button>
+                                <a
+                                    href={`https://wa.me/5492901553173?text=${encodeURIComponent(`Hola! Estoy interesado en el producto "${product.name}" que vi en la web. Quisiera más información sobre `)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1"
+                                >
+                                    <Button size="lg" variant="outline" className="w-full border-olive text-olive hover:bg-olive/10 h-14 text-lg">
+                                        <Phone className="mr-2 h-5 w-5" /> Consultar por WhatsApp
+                                    </Button>
+                                </a>
                                 <Button size="icon" variant="ghost" className="h-14 w-14 border border-stone-200">
                                     <Heart className="h-6 w-6 text-stone-400" />
                                 </Button>

@@ -37,7 +37,7 @@ export default function ProductFilters({ categories }: { categories: Category[] 
             params.delete("cat");
         }
         // Reset pagination if exists? For now just push
-        router.push(`/shop?${params.toString()}`);
+        router.push(`/productos?${params.toString()}`);
     };
 
     const handlePriceFilter = () => {
@@ -48,7 +48,7 @@ export default function ProductFilters({ categories }: { categories: Category[] 
         if (maxPrice) params.set("max", maxPrice);
         else params.delete("max");
 
-        router.push(`/shop?${params.toString()}`);
+        router.push(`/productos?${params.toString()}`);
     };
 
     return (

@@ -22,14 +22,14 @@ export function Hero() {
                     Decoración pensada para el clima y la luz de Ushuaia.
                     Creá espacios que te abracen.
                 </p>
-                <div className="flex flex-col gap-4 sm:flex-row">
+                <div className="flex flex-col gap-4 sm:flex-row justify-center w-full">
                     <Link href="/productos" className="flex-1 sm:flex-none">
-                        <Button size="lg" className="w-full bg-olive hover:bg-olive-dark text-white text-lg h-14 px-8 rounded-full border-2 border-transparent transition-all">
+                        <Button size="lg" className="w-full sm:w-auto bg-olive hover:bg-olive-dark text-white text-lg h-14 px-8 rounded-full border-2 border-transparent transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                             Ver Catálogo
                         </Button>
                     </Link>
-                    <Link href="/cotizador">
-                        <Button size="lg" variant="outline" className="min-w-[160px] border-white text-white hover:bg-white/20 text-lg font-medium backdrop-blur-sm">
+                    <Link href="/cotizador" className="flex-1 sm:flex-none">
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white text-white hover:bg-white/20 text-lg h-14 px-8 rounded-full font-medium backdrop-blur-sm transition-all hover:-translate-y-0.5">
                             Cotizar Cortinas
                         </Button>
                     </Link>

@@ -90,7 +90,7 @@ export default function PromotionManager({ promotions }: { promotions: Promotion
                     <h1 className="text-3xl font-serif font-bold text-stone-800">Promociones</h1>
                     <p className="text-stone-500">Administra tus cupones de descuento.</p>
                 </div>
-                <Button onClick={() => setOpen(true)} className="bg-olive text-white gap-2">
+                <Button onClick={() => setOpen(true)} className="bg-olive text-white gap-1 whitespace-nowrap">
                     <Plus className="h-4 w-4" /> Nueva Promo
                 </Button>
             </div>

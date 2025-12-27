@@ -206,70 +206,72 @@ export default function ProductManager({ products, categories }: { products: Pro
             </div>
 
             <div className="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden">
-                <table className="w-full text-sm text-left">
-                    <thead className="bg-stone-50 text-stone-500 font-medium">
-                        <tr>
-                            <th className="px-6 py-4">Imagen</th>
-                            <th className="px-6 py-4">Nombre</th>
-                            <th className="px-6 py-4">Categoría</th>
-                            <th className="px-6 py-4">Precio</th>
-                            <th className="px-6 py-4">Stock</th>
-                            <th className="px-6 py-4 text-right">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-stone-100">
-                        {filteredProducts.map((product) => (
-                            <tr key={product.id} className="hover:bg-stone-50/50">
-                                <td className="px-6 py-4">
-                                    <div className="h-10 w-10 rounded bg-stone-100 overflow-hidden">
-                                        {product.image && (
-                                            <div
-                                                className="w-full h-full bg-cover bg-center"
-                                                style={{ backgroundImage: `url('${product.image}')` }}
-                                            />
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm text-left whitespace-nowrap">
+                        <thead className="bg-stone-50 text-stone-500 font-medium">
+                            <tr>
+                                <th className="px-6 py-4">Imagen</th>
+                                <th className="px-6 py-4">Nombre</th>
+                                <th className="px-6 py-4">Categoría</th>
+                                <th className="px-6 py-4">Precio</th>
+                                <th className="px-6 py-4">Stock</th>
+                                <th className="px-6 py-4 text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-stone-100">
+                            {filteredProducts.map((product) => (
+                                <tr key={product.id} className="hover:bg-stone-50/50">
+                                    <td className="px-6 py-4">
+                                        <div className="h-10 w-10 rounded bg-stone-100 overflow-hidden shrink-0">
+                                            {product.image && (
+                                                <div
+                                                    className="w-full h-full bg-cover bg-center"
+                                                    style={{ backgroundImage: `url('${product.image}')` }}
+                                                />
+                                            )}
+
+                                        </div>
+                                    </td>
+                                    <td className="px-6 py-4 font-medium text-stone-900">{product.name}</td>
+                                    <td className="px-6 py-4 capitalize">{product.category.name}</td>
+                                    <td className="px-6 py-4">${product.price.toLocaleString('es-AR')}</td>
+                                    <td className="px-6 py-4">
+                                        {product.stock > 0 ? (
+                                            <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-50 text-green-600">
+                                                {product.stock} un.
+                                            </span>
+                                        ) : (
+                                            <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-50 text-red-600">
+                                                Sin Stock
+                                            </span>
                                         )}
 
-                                    </div>
-                                </td>
-                                <td className="px-6 py-4 font-medium text-stone-900">{product.name}</td>
-                                <td className="px-6 py-4 capitalize">{product.category.name}</td>
-                                <td className="px-6 py-4">${product.price.toLocaleString('es-AR')}</td>
-                                <td className="px-6 py-4">
-                                    {product.stock > 0 ? (
-                                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-50 text-green-600">
-                                            {product.stock} un.
-                                        </span>
-                                    ) : (
-                                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-50 text-red-600">
-                                            Sin Stock
-                                        </span>
-                                    )}
-
-                                </td>
-                                <td className="px-6 py-4 text-right">
-                                    <div className="flex justify-end gap-2">
-                                        <Button
-                                            size="icon"
-                                            variant="ghost"
-                                            className="h-8 w-8 text-stone-500 hover:text-olive"
-                                            onClick={() => handleEdit(product)}
-                                        >
-                                            <Pencil className="h-4 w-4" />
-                                        </Button>
-                                        <Button
-                                            size="icon"
-                                            variant="ghost"
-                                            className="h-8 w-8 text-stone-500 hover:text-red-500"
-                                            onClick={() => requestDelete(product)}
-                                        >
-                                            <Trash2 className="h-4 w-4" />
-                                        </Button>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                                    </td>
+                                    <td className="px-6 py-4 text-right">
+                                        <div className="flex justify-end gap-2">
+                                            <Button
+                                                size="icon"
+                                                variant="ghost"
+                                                className="h-8 w-8 text-stone-500 hover:text-olive"
+                                                onClick={() => handleEdit(product)}
+                                            >
+                                                <Pencil className="h-4 w-4" />
+                                            </Button>
+                                            <Button
+                                                size="icon"
+                                                variant="ghost"
+                                                className="h-8 w-8 text-stone-500 hover:text-red-500"
+                                                onClick={() => requestDelete(product)}
+                                            >
+                                                <Trash2 className="h-4 w-4" />
+                                            </Button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             {/* Global Confirmation Modal */}

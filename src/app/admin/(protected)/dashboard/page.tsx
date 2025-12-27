@@ -32,7 +32,7 @@ export default async function DashboardOverview() {
             <div className="flex justify-between items-center">
                 <h1 className="text-3xl font-serif font-bold text-stone-800">Panel de Control</h1>
                 <Link href="/admin/products">
-                    <Button className="bg-olive text-white shadow-sm gap-2">
+                    <Button className="bg-olive text-white shadow-sm gap-1 whitespace-nowrap">
                         <Package className="h-4 w-4" /> Nuevo Producto
                     </Button>
                 </Link>
