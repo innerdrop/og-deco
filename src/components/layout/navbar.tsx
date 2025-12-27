@@ -28,7 +28,7 @@ export function Navbar() {
                     {/* Tried invert for contrast if logo is white. If logo is black, remove invert. */}
                     <img src="/logo-full.png" alt="OG Decoraciones" className="h-10 w-10 object-cover rounded-full" />
                     <span className="font-serif text-xl font-bold text-stone-800 tracking-wide">
-                        SG Decoraciones
+                        OG Decoraciones
                     </span>
                 </Link>
 
