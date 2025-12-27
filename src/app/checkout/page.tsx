@@ -198,7 +198,7 @@ export default function CheckoutPage() {
                             <Link href="/">
                                 <Button variant="outline">Volver al Inicio</Button>
                             </Link>
-                            <Link href="/shop">
+                            <Link href="/productos">
                                 <Button className="bg-olive hover:bg-olive-dark text-white">Seguir Comprando</Button>
                             </Link>
                         </div>
