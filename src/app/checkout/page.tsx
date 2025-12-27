@@ -34,14 +34,12 @@ export default function CheckoutPage() {
                 toast({
                     title: "¡Cupón aplicado!",
                     description: `Descuento del ${result.discount}% aplicado correctamente.`,
-                    className: "bg-green-600 text-white border-none",
                 });
             } else {
                 setAppliedDiscount(null);
                 toast({
                     title: "Error",
                     description: result.error,
-                    className: "bg-red-600 text-white border-none",
                 });
             }
         } catch (error) {

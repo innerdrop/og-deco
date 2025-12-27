@@ -65,7 +65,7 @@ export default function MarketingManager({ users }: { users: User[] }) {
                     <div className="grid grid-cols-2 gap-2 mb-4">
                         <Button
                             type="button"
-                            variant={mode === "all" ? "default" : "outline"}
+                            variant={mode === "all" ? "primary" : "outline"}
                             className={mode === "all" ? "bg-olive hover:bg-olive-dark" : ""}
                             onClick={() => setMode("all")}
                         >
@@ -73,7 +73,7 @@ export default function MarketingManager({ users }: { users: User[] }) {
                         </Button>
                         <Button
                             type="button"
-                            variant={mode === "select" ? "default" : "outline"}
+                            variant={mode === "select" ? "primary" : "outline"}
                             className={mode === "select" ? "bg-olive hover:bg-olive-dark" : ""}
                             onClick={() => setMode("select")}
                         >

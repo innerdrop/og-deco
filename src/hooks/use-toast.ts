@@ -13,6 +13,8 @@ type ToastProps = {
     action?: React.ReactNode
     open?: boolean
     onOpenChange?: (open: boolean) => void
+    className?: string
+    variant?: "default" | "destructive" | null
 }
 
 type ToasterToast = ToastProps
