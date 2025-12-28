@@ -1,8 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
-import { useFormStatus } from "react-dom";
+
 import { authenticate } from "@/actions/auth-actions";
 import { Lock } from "lucide-react";
 
@@ -20,7 +20,7 @@ function LoginButton() {
 }
 
 export default function AdminLogin() {
-    const [errorMessage, dispatch, isPending] = useActionState(authenticate, undefined);
+    const [errorMessage, dispatch] = useFormState(authenticate, undefined);
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-stone-100">
