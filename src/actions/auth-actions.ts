@@ -9,7 +9,11 @@ export async function authenticate(
 ) {
     try {
         console.log("Authenticate action called with:", Object.fromEntries(formData)); // WARNING: PROD UNSAFE
-        await signIn("credentials", formData);
+        await signIn("credentials", {
+            email: formData.get("email"),
+            password: formData.get("password"),
+            redirectTo: "/admin/dashboard",
+        });
     } catch (error) {
         if (error instanceof AuthError) {
             switch (error.type) {
