@@ -33,14 +33,20 @@ export default function LoginForm() {
                     <p className="text-stone-500">Panel de Administración</p>
                 </div>
 
-                <form action={dispatch} className="space-y-4">
+                <form action={dispatch} className="space-y-4" autoComplete="off">
+                    {/* Dummy inputs to trick browser autofill */}
+                    <input type="text" name="fake_email_to_prevent_autofill" style={{ position: 'absolute', opacity: 0, height: 0, width: 0, zIndex: -1, pointerEvents: 'none' }} tabIndex={-1} autoComplete="off" />
+                    <input type="password" name="fake_password_to_prevent_autofill" style={{ position: 'absolute', opacity: 0, height: 0, width: 0, zIndex: -1, pointerEvents: 'none' }} tabIndex={-1} autoComplete="off" />
+
                     <div>
                         <label className="block text-sm font-medium text-stone-700 mb-1">Email</label>
                         <input
                             name="email"
                             type="email"
-                            defaultValue="admin@ogdecoraciones.com"
                             required
+                            autoComplete="off"
+                            readOnly
+                            onFocus={(e) => e.target.readOnly = false}
                             className="w-full h-10 rounded-md border border-stone-200 px-3 focus:outline-none focus:ring-1 focus:ring-olive"
                         />
                     </div>
@@ -50,7 +56,9 @@ export default function LoginForm() {
                             name="password"
                             type="password"
                             required
-                            defaultValue="password123"
+                            autoComplete="new-password"
+                            readOnly
+                            onFocus={(e) => e.target.readOnly = false}
                             className="w-full h-10 rounded-md border border-stone-200 px-3 focus:outline-none focus:ring-1 focus:ring-olive"
                         />
                     </div>
