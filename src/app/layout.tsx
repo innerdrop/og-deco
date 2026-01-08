@@ -18,6 +18,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "OG Decoraciones | Tu casa es tu templo",
   description: "Decoración pensada para el clima y la luz de Ushuaia. Cortinas, pisos, plantas y más.",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 import { CartProvider } from "@/context/cart-context";
