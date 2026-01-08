@@ -458,7 +458,7 @@ export default function ProposalPage() {
                                 <Button
                                     onClick={() => {
                                         const message = `Hola Mauro! Vi la propuesta para OG Decoraciones y me gustaría coordinar una visita para charlar.\n\n¿Cuándo podrías pasar?`;
-                                        window.open(`https://wa.me/5492901652974?text=${encodeURIComponent(message)}`, '_blank');
+                                        window.open(`https://wa.me/5492901582886?text=${encodeURIComponent(message)}`, '_blank');
                                     }}
                                     className="h-14 px-10 bg-olive hover:bg-olive-dark text-white text-lg font-bold rounded-full shadow-xl hover:scale-105 transition-all"
                                 >

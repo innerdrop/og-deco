@@ -61,7 +61,7 @@ export function Navbar() {
                     </Link>
 
                     <a
-                        href="https://wa.me/5492901553173"
+                        href="https://wa.me/5492901582886"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hidden md:block"
@@ -96,7 +96,7 @@ export function Navbar() {
                             </Link>
                         ))}
                         <a
-                            href="https://wa.me/5492901553173"
+                            href="https://wa.me/5492901582886"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-4"

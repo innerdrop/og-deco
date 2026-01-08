@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: Props) {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <AddToCartButton product={product} />
                                 <a
-                                    href={`https://wa.me/5492901553173?text=${encodeURIComponent(`Hola! Estoy interesado en el producto "${product.name}" que vi en la web. Quisiera más información sobre `)}`}
+                                    href={`https://wa.me/5492901582886?text=${encodeURIComponent(`Hola! Estoy interesado en el producto "${product.name}" que vi en la web. Quisiera más información sobre `)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex-1"
