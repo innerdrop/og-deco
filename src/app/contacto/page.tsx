@@ -26,7 +26,7 @@ export default function ContactPage() {
                                 <Phone className="text-olive h-6 w-6 mt-1" />
                                 <div>
                                     <h3 className="font-bold text-stone-900">WhatsApp</h3>
-                                    <p className="text-stone-600">+54 9 2901 123456</p>
+                                    <p className="text-stone-600">+54 9 2901 582886</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
