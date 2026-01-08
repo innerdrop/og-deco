@@ -3,6 +3,7 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
+import { BackToProposalButton } from "@/components/ui/back-to-proposal-button";
 
 const outfit = Outfit({
   variable: "--font-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
         <CartProvider>
           {children}
+          <BackToProposalButton />
           <WhatsAppFloat />
         </CartProvider>
       </body>

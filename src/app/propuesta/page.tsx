@@ -214,14 +214,14 @@ export default function ProposalPage() {
                         SU NEGOCIO, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B8000] to-[#556B2F] animate-gradient">AUTOMÁTICO.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-stone-500 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-                        Somos V Solutions, desarrolladores de software. En esta oportunidad, hemos diseñado una estrategia para que <strong>OG Decoraciones</strong> deje de depender de su tiempo manual y empiece a escalar con tecnología propia.
+                        Somos <strong>V Solutions</strong>, desarrolladores de software. En esta oportunidad, hemos diseñado una estrategia para que <strong>OG Decoraciones</strong> deje de depender de su tiempo manual y empiece a escalar con tecnología propia.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Button
-                            onClick={() => document.getElementById('analysis')?.scrollIntoView({ behavior: 'smooth' })}
+                            onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
                             className="bg-stone-900 hover:bg-stone-800 text-white h-14 px-8 rounded-full text-lg shadow-xl"
                         >
-                            Ver Análisis de Marca
+                            Probar Demo
                         </Button>
                     </div>
                 </motion.div>

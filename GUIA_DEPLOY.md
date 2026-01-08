@@ -24,7 +24,7 @@ cd /var/www/og-deco
 git pull origin main
 npm install
 npm run build
-pm2 restart og-deco-site
+pm2 restart og-deco
 ```
 
 ---

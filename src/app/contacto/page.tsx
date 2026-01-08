@@ -45,11 +45,17 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        <div className="aspect-video w-full bg-stone-200 rounded-lg mt-8 relative overflow-hidden">
-                            {/* Map Placeholder */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-stone-300 text-stone-500 font-medium">
-                                Google Maps Mockup
-                            </div>
+                        <div className="aspect-video w-full rounded-lg mt-8 overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2346.8!2d-68.3063!3d-54.8074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22f5fce3b195%3A0x7e47a4f54cf1f3ce!2sPrimer%20Argentino%20221%2C%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Ubicación OG Decoraciones"
+                            />
                         </div>
                     </div>
 
@@ -79,7 +85,8 @@ export default function ContactPage() {
                                 <label className="text-sm font-medium text-stone-700">Mensaje</label>
                                 <textarea className="w-full min-h-[120px] rounded-md border border-stone-200 p-3 focus:outline-none focus:ring-1 focus:ring-olive" />
                             </div>
-                            <Button size="lg" className="w-full bg-olive hover:bg-olive-dark text-white">Enviar Mensaje</Button>
+                            <Button size="lg" disabled className="w-full bg-olive/50 text-white cursor-not-allowed">Enviar Mensaje</Button>
+                            <p className="text-center text-xs text-stone-400 mt-2">Formulario de demostración — Configurable a pedido</p>
                         </form>
                     </div>
                 </div>
