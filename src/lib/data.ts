@@ -9,7 +9,7 @@ export const categories = [
     {
         id: "pisos",
         name: "Pisos Flotantes",
-        image: "/images/category_pisos.png",
+        image: "/images/category_pisos.jpg",
         href: "/shop?cat=pisos"
     },
     {
@@ -21,13 +21,13 @@ export const categories = [
     {
         id: "velas",
         name: "Velas & Aromas",
-        image: "/images/category_velas.png",
+        image: "/images/category_velas.jpg",
         href: "/shop?cat=velas"
     },
     {
         id: "vajilla",
         name: "Vajilla & Textil",
-        image: "/images/category_vajilla.png",
+        image: "/images/category_vajilla.jpg",
         href: "/shop?cat=vajilla"
     },
     {
