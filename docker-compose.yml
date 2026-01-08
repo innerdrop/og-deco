@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  og_deco_db:
+    image: postgres:15-alpine
+    container_name: og-deco-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: og_deco_db
+    volumes:
+      - og_deco_data:/var/lib/postgresql/data
+
+volumes:
+  og_deco_data:

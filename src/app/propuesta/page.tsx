@@ -132,164 +132,52 @@ const PACKAGES = [
 
 const EXTRA_FEATURES: Feature[] = [
     {
-        id: "erp",
-        title: "Integración con ERP/Facturación",
-        icon: Database,
-        short: "Sincronización con su software de gestión.",
-        full_description: "Conectamos la tienda online con su sistema de gestión actual (Tango, Dragonfish, etc.) para que el stock y los precios se actualicen automáticamente en ambos lados.",
-        benefits: ["Adiós a la doble carga de datos.", "Stock unificado real.", "Ahorro administrativo."]
-    },
-    {
-        id: "chatbot",
-        title: "Chatbot con Inteligencia Artificial",
-        icon: Bot,
-        short: "Atención al cliente automática 24/7.",
-        full_description: "Un asistente virtual entrenado con la información de sus telas y servicios que responde preguntas frecuentes, toma datos de contacto y ayuda a elegir productos.",
-        benefits: ["Respuestas inmediatas.", "Filtra consultas básicas.", "Disponible domingos y feriados."]
-    },
-    {
         id: "blog",
-        title: "Blog de Novedades & Tips",
+        title: "Blog de Novedades",
         icon: PenTool,
-        short: "Artículos para atraer tráfico Google.",
-        full_description: "Una sección de noticias donde publicar artículos sobre 'Cómo medir cortinas', 'Tendencias 2026', etc. Fundamental para aparecer primero en las búsquedas de Google.",
-        benefits: ["Posicionamiento SEO orgánico.", "Autoridad de marca.", "Contenido para redes."]
-    },
-    {
-        id: "newsletter",
-        title: "Newsletter Automático",
-        icon: MessageSquare,
-        short: "Email Marketing para recompras.",
-        full_description: "Sistema que captura emails de clientes y envía novedades automáticas o manuales (Mailchimp/Klaviyo). Ideal para avisar de nuevas telas o promociones.",
-        benefits: ["Canal de venta directo.", "Fidelización.", "Costo cero por mensaje."]
-    },
-    {
-        id: "cart_recovery",
-        title: "Recuperador de Carritos",
-        icon: ShoppingCart,
-        short: "Rescata ventas no finalizadas.",
-        full_description: "Si alguien inicia la compra y se va, el sistema le envía un email o WhatsApp automático a la hora: '¿Te olvidaste esto?'. Recupera hasta un 15% de ventas perdidas.",
-        benefits: ["Aumenta la facturación sin gastar.", "Seguimiento automático.", "Segunda oportunidad de venta."]
+        short: "Artículos para atraer tráfico.",
+        full_description: "Una sección donde publicar artículos sobre tendencias, tips de diseño, etc. Fundamental para aparecer en Google.",
+        benefits: ["Posicionamiento SEO.", "Autoridad de marca.", "Contenido para redes."]
     },
     {
         id: "coupons",
-        title: "Cupones Avanzados",
+        title: "Cupones de Descuento",
         icon: TrendingUp,
-        short: "Descuentos por reglas complejas.",
-        full_description: "Permite crear promociones como '2x1 en almohadones', '10% OFF pagando con Transferencia', o 'Envío gratis superando $100.000'.",
-        benefits: ["Estrategias de venta agresivas.", "Liquidación de stock.", "Incentivos de compra."]
-    },
-    {
-        id: "giftcards",
-        title: "Gift Cards Digitales",
-        icon: CreditCard,
-        short: "Venta de saldo para regalar.",
-        full_description: "Permite a sus clientes comprar tarjetas de regalo por montos fijos para enviar a amigos o familiares. El destinatario recibe un código para canjear.",
-        benefits: ["Cobro anticipado.", "Atrae nuevos clientes.", "Ideal para fechas especiales."]
+        short: "Promociones y ofertas.",
+        full_description: "Permite crear promociones como '10% OFF', 'Envío gratis superando X monto', etc.",
+        benefits: ["Incentivos de compra.", "Liquidación de stock.", "Fechas especiales."]
     },
     {
         id: "wishlist",
         title: "Lista de Deseos",
         icon: Heart,
-        short: "Guardar favoritos para después.",
-        full_description: "Permite a los usuarios marcar productos que les gustan pero no comprarán ya. Sirve para medir interés y para que el cliente no pierda su selección.",
-        benefits: ["Reduce el abandono.", "Mide productos populares.", "Facilita la compra futura."]
-    },
-    {
-        id: "comparator",
-        title: "Comparador de Productos",
-        icon: Check,
-        short: "Tabla comparativa de specs.",
-        full_description: "Permite seleccionar 2 o 3 telas y verlas lado a lado: transparencia, textura, composición, limpieza. Ideal para productos técnicos.",
-        benefits: ["Ayuda a decidir.", "Experiencia profesional.", "Menos dudas técnicas."]
-    },
-    {
-        id: "social_login",
-        title: "Login Google / Facebook",
-        icon: User,
-        short: "Registro en 1 clic.",
-        full_description: "Permite a los clientes registrarse e iniciar sesión usando su cuenta de Google o Facebook, sin tener que crear una contraseña nueva.",
-        benefits: ["Reduce fricción de registro.", "Más usuarios registrados.", "Acceso rápido."]
+        short: "Guardar favoritos.",
+        full_description: "Permite a los usuarios marcar productos que les gustan para comprar después.",
+        benefits: ["Reduce el abandono.", "Mide interés.", "Facilita recompra."]
     },
     {
         id: "reviews",
         title: "Reseñas con Fotos",
         icon: Instagram,
-        short: "Testimonios reales de clientes.",
-        full_description: "Módulo para que los compradores suban fotos de cómo quedaron sus cortinas instaladas y dejen una calificación de 1 a 5 estrellas.",
-        benefits: ["Prueba social imbatible.", "Genera confianza.", "Contenido generado por usuario."]
+        short: "Testimonios de clientes.",
+        full_description: "Módulo para que los compradores suban fotos y dejen calificaciones.",
+        benefits: ["Prueba social.", "Genera confianza.", "Contenido genuino."]
     },
     {
-        id: "shipping_map",
-        title: "Mapa de Zona de Envíos",
-        icon: Globe,
-        short: "Costos por polígono en mapa.",
-        full_description: "Dibuje en un mapa las zonas de envío (Centro, Periferia, Río Grande) y asigne costos diferentes. El cliente pone su dirección y el sistema cobra exacto.",
-        benefits: ["Cálculo preciso.", "Sin errores de zona.", "Visual para el cliente."]
+        id: "social_login",
+        title: "Login Google",
+        icon: User,
+        short: "Registro en 1 clic.",
+        full_description: "Permite registrarse usando su cuenta de Google, sin crear contraseña.",
+        benefits: ["Menos fricción.", "Más usuarios.", "Acceso rápido."]
     },
     {
-        id: "afip",
-        title: "Factura Electrónica AFIP",
-        icon: FileText,
-        short: "Facturación legal automática.",
-        full_description: "Emisión de comprobantes A o B autorizados por AFIP automáticamente al confirmarse el pago. Se envía el PDF por email al cliente.",
-        benefits: ["Cumplimiento legal.", "Ahorro de tiempo administrativo.", "Profesionalismo."]
-    },
-    {
-        id: "push",
-        title: "Notificaciones Push",
-        icon: Smartphone,
-        short: "Alertas al celular del cliente.",
-        full_description: "Envíe notificaciones tipo app ('¡Llegaron nuevas telas!') directamente a la pantalla de los clientes que aceptaron recibirlas.",
-        benefits: ["Canal directo.", "Alta tasa de apertura.", "Retargeting móvil."]
-    },
-    {
-        id: "app",
-        title: "App Móvil Nativa",
-        icon: Smartphone,
-        short: "OG Deco en Play Store / App Store.",
-        full_description: "Desarrollo de la aplicación oficial descargable de las tiendas. El icono queda fijo en el celular del cliente.",
-        benefits: ["Prestigio de marca.", "Fidelización máxima.", "Experiencia nativa."]
-    },
-    {
-        id: "multilang",
-        title: "Soporte Multi-IDIOMA",
-        icon: Globe,
-        short: "Web en Inglés/Portugués.",
-        full_description: "Traducción completa del sitio para turistas o clientes internacionales. Detección automática del idioma del navegador.",
-        benefits: ["Apertura a turismo.", "Ventas internacionales.", "Imagen global."]
-    },
-    {
-        id: "b2b",
-        title: "Área Mayorista (B2B)",
-        icon: Lock,
-        short: "Precios especiales para reventa.",
-        full_description: "Acceso exclusivo para arquitectos o revendedores. Ven una lista de precios diferente y condiciones de compra por volumen.",
-        benefits: ["Canal de venta mayorista.", "Gestión diferenciada.", "Escalabilidad comercial."]
-    },
-    {
-        id: "shipping_api",
-        title: "Integración Andreani",
-        icon: TrendingUp,
-        short: "Etiquetas de envío automáticas.",
-        full_description: "Conexión directa con Andreani/Correo Argentino. Genera la etiqueta PDF para pegar en el paquete automáticamente.",
-        benefits: ["Logística resuelta.", "Seguimiento real.", "Ahorro de tiempo en despacho."]
-    },
-    {
-        id: "seo",
-        title: "SEO Avanzado",
-        icon: TrendingUp,
-        short: "Posicionamiento técnico.",
-        full_description: "Optimización profunda de velocidad, meta-tags, schema.org y estructura de datos para competir por los primeros puestos en Google.",
-        benefits: ["Tráfico gratuito.", "Visibilidad a largo plazo.", "Ventaja competitiva."]
-    },
-    {
-        id: "popups",
-        title: "Popups Inteligentes",
-        icon: AlertCircle,
-        short: "Captura de leads y ofertas.",
-        full_description: "Ventanas emergentes que aparecen al intentar salir del sitio o tras X segundos, ofreciendo un descuento a cambio del email.",
-        benefits: ["Aumenta base de datos.", "Reduce tasa de rebote.", "Comunica ofertas urgentes."]
+        id: "newsletter",
+        title: "Newsletter",
+        icon: MessageSquare,
+        short: "Email Marketing.",
+        full_description: "Captura emails de clientes y envía novedades automáticas o manuales.",
+        benefits: ["Canal directo.", "Fidelización.", "Costo cero."]
     }
 ];
 
@@ -307,7 +195,7 @@ export default function ProposalPage() {
                     className="text-xs uppercase tracking-widest font-bold text-olive hover:bg-olive/10"
                     onClick={() => document.getElementById('presupuesto')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                    Ver Planes
+                    Empezar
                 </Button>
             </header>
 
@@ -326,7 +214,7 @@ export default function ProposalPage() {
                         SU NEGOCIO, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B8000] to-[#556B2F] animate-gradient">AUTOMÁTICO.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-stone-500 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-                        Soy Mauro, desarrollador de software. He diseñado una estrategia para que <strong>OG Decoraciones</strong> deje de depender de su tiempo manual y empiece a escalar con tecnología propia.
+                        Somos V Solutions, desarrolladores de software. En esta oportunidad, hemos diseñado una estrategia para que <strong>OG Decoraciones</strong> deje de depender de su tiempo manual y empiece a escalar con tecnología propia.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Button
@@ -427,9 +315,9 @@ export default function ProposalPage() {
                                     <li className="flex gap-4">
                                         <Clock className="h-4 w-4 text-stone-400 shrink-0 mt-1" />
                                         <div>
-                                            <h4 className="font-bold text-white text-sm">El Infierno de Cotizar</h4>
+                                            <h4 className="font-bold text-white text-sm">Consultas Repetitivas</h4>
                                             <p className="text-stone-400 text-xs mt-1">
-                                                Calcular m² x precio de tela x confección MANUALMENTE es insostenible. Están usando tiempo valioso de dueños en tareas de calculadora.
+                                                Responder las mismas preguntas una y otra vez por DM consume tiempo valioso que podría usarse en tareas más importantes.
                                             </p>
                                         </div>
                                     </li>
@@ -539,121 +427,73 @@ export default function ProposalPage() {
                 </div>
             </section>
 
-            {/* 5. PRECIOS (PACKAGES) */}
-            <section id="presupuesto" className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="text-center mb-16">
-                        <span className="text-olive font-bold tracking-widest text-xs uppercase mb-2 block">Inversión y Planes</span>
-                        <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-6">Planes Escalonados</h2>
-                        <p className="text-stone-500 max-w-2xl mx-auto">
-                            Elija el nivel de automatización que su negocio necesita hoy.
-                        </p>
-                    </div>
+            {/* 5. CTA - LLAMADO A LA ACCIÓN */}
+            <section id="presupuesto" className="py-24 bg-stone-50">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="relative bg-white rounded-3xl p-12 md:p-16 text-center border-2 border-olive/30 shadow-2xl overflow-hidden"
+                    >
+                        {/* Decorative elements */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-olive/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-olive/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-                    <div className="grid lg:grid-cols-3 gap-6 items-start">
-                        {PACKAGES.map((pkg, index) => (
-                            <motion.div
-                                key={pkg.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className={`
-                                    relative rounded-2xl p-8 border transition-all duration-300 flex flex-col h-auto
-                                    ${pkg.popular
-                                        ? "bg-white border-olive ring-1 ring-olive shadow-2xl scale-100 lg:-translate-y-4 z-10"
-                                        : "bg-stone-50 border-stone-100 hover:shadow-lg"
-                                    }
-                                `}
-                            >
-                                {pkg.popular && (
-                                    <div className="absolute top-0 inset-x-0 -translate-y-1/2 flex justify-center">
-                                        <span className="bg-olive text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2">
-                                            Recomendado
-                                        </span>
-                                    </div>
-                                )}
+                        <div className="relative z-10">
+                            <span className="inline-block py-1 px-4 rounded-full bg-olive/10 text-olive border border-olive/20 font-bold tracking-widest text-[10px] uppercase mb-8">
+                                Próximo Paso
+                            </span>
 
-                                <div className="mb-6 text-center">
-                                    <h3 className="text-xl font-bold text-stone-900 mb-2">{pkg.name}</h3>
-                                    <p className="text-sm text-stone-500 h-10 leading-relaxed">{pkg.description}</p>
-                                </div>
+                            <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-6 leading-tight">
+                                Escribinos para <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B8000] to-[#556B2F]">visitarte</span>
+                            </h2>
 
-                                <div className="space-y-4 mb-10 flex-1">
-                                    {pkg.features.map((featureId) => {
-                                        const feature = FEATURES[featureId];
-                                        return (
-                                            <div key={featureId} className="flex items-start gap-3 group cursor-pointer" onClick={() => setSelectedFeature(feature)}>
-                                                <div className="mt-0.5 w-5 h-5 rounded-full bg-olive/10 text-olive flex items-center justify-center shrink-0 group-hover:bg-olive group-hover:text-white transition-colors">
-                                                    <Check className="h-3 w-3" />
-                                                </div>
-                                                <div className="flex-1 border-b border-stone-200/50 pb-2 group-hover:border-olive/30 transition-colors">
-                                                    <div className="flex items-center gap-2">
-                                                        <span className="text-sm font-bold text-stone-700 group-hover:text-olive transition-colors">{feature.title}</span>
-                                                        <Info className="h-3 w-3 text-stone-300 group-hover:text-olive transition-colors opacity-0 group-hover:opacity-100" />
-                                                    </div>
-                                                    <p className="text-xs text-stone-400 line-clamp-1">{feature.short}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
+                            <p className="text-stone-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                                Coordinamos una visita a tu local para conocer tu operación, entender tus necesidades y armar juntos la mejor solución.
+                                <span className="block mt-3 text-stone-400 text-base">Sin compromiso. Solo una charla.</span>
+                            </p>
 
-                                <div className="mb-6 text-center pt-6 border-t border-stone-100">
-                                    {pkg.originalPrice && (
-                                        <div className="text-stone-400 line-through text-sm mb-1">
-                                            ${pkg.originalPrice.toLocaleString('es-AR')}
-                                        </div>
-                                    )}
-                                    <div className="text-4xl font-serif font-bold text-stone-900 flex items-center justify-center gap-2">
-                                        <span>${(pkg.price / 1000).toFixed(0)}<span className="text-2xl text-stone-400">k</span> <span className="text-sm font-sans font-normal text-stone-400">ARS</span></span>
-                                    </div>
-                                    <div className="text-sm font-medium text-olive mt-1">
-                                        ≈ U$S {Math.round(pkg.price / 1150)}
-                                    </div>
-                                    <div className="text-[10px] uppercase tracking-widest text-stone-400 mt-2">Pago Único</div>
-                                </div>
-
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                                 <Button
                                     onClick={() => {
-                                        const message = `Hola Mauro! Elijo el ${pkg.name}.\n\n¿Cómo seguimos?`;
-                                        window.open(`https://wa.me/5492901553173?text=${encodeURIComponent(message)}`, '_blank');
+                                        const message = `Hola Mauro! Vi la propuesta para OG Decoraciones y me gustaría coordinar una visita para charlar.\n\n¿Cuándo podrías pasar?`;
+                                        window.open(`https://wa.me/5492901652974?text=${encodeURIComponent(message)}`, '_blank');
                                     }}
-                                    className={`
-                                        w-full h-12 font-bold text-sm rounded-lg transition-all shadow-md
-                                        ${pkg.popular
-                                            ? "bg-olive hover:bg-olive-dark text-white hover:scale-[1.02]"
-                                            : "bg-white border border-stone-300 text-stone-900 hover:bg-stone-50"
-                                        }
-                                    `}
+                                    className="h-14 px-10 bg-olive hover:bg-olive-dark text-white text-lg font-bold rounded-full shadow-xl hover:scale-105 transition-all"
                                 >
-                                    {pkg.cta}
+                                    <MessageSquare className="h-5 w-5 mr-2" />
+                                    Coordinar Visita por WhatsApp
                                 </Button>
-                            </motion.div>
-                        ))}
-                    </div>
+                            </div>
 
-                    <div className="text-center mt-8">
-                        <p className="text-stone-400 text-xs flex items-center justify-center gap-2">
-                            <Info className="h-3 w-3" />
-                            Haga clic en los ítems de la lista para ver el detalle.
-                        </p>
-                    </div>
+                            <div className="flex flex-wrap justify-center gap-6 text-sm text-stone-400">
+                                <div className="flex items-center gap-2">
+                                    <ShieldCheck className="h-4 w-4 text-olive" />
+                                    <span>Respuesta en menos de 2 horas</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Clock className="h-4 w-4 text-olive" />
+                                    <span>Disponible Lun-Sáb</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* 6. MENÚ DE EXPANSIÓN (20 Items) */}
+            {/* 6. MENÚ DE EXPANSIÓN (6 Items) */}
             <section className="py-20 bg-stone-50 border-t border-stone-200">
-                <div className="container mx-auto px-6 max-w-5xl">
+                <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center mb-12">
-                        <span className="text-stone-400 font-bold tracking-widest text-xs uppercase mb-2 block">Personalización Infinita</span>
+                        <span className="text-stone-400 font-bold tracking-widest text-xs uppercase mb-2 block">Extras</span>
                         <h2 className="text-3xl font-serif text-stone-900 mb-6">¿Qué más podemos agregar?</h2>
                         <p className="text-stone-500 max-w-2xl mx-auto">
-                            Además de los planes base, su sistema está preparado para integrar cualquiera de estos 20 módulos adicionales cuando el negocio lo requiera.
+                            Tu sistema está preparado para crecer con módulos adicionales.
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                         {EXTRA_FEATURES.map((item) => (
                             <div
                                 key={item.id}
@@ -665,10 +505,16 @@ export default function ProposalPage() {
                                 </div>
                                 <div>
                                     <span className="text-xs font-bold text-stone-600 leading-tight group-hover:text-olive transition-colors block mb-1">{item.title}</span>
-                                    <span className="text-[10px] text-stone-400 block line-clamp-1">Ver detalle</span>
+                                    <span className="text-[10px] text-stone-400 block line-clamp-1">{item.short}</span>
                                 </div>
                             </div>
                         ))}
+                    </div>
+
+                    <div className="text-center">
+                        <span className="inline-block py-2 px-6 rounded-full bg-olive/10 text-olive font-bold text-sm">
+                            ¡Y mucho más!
+                        </span>
                     </div>
                 </div>
             </section>
@@ -695,38 +541,18 @@ export default function ProposalPage() {
                 </div>
             </section>
 
-            {/* 7. GARANTIA & TIMELINE */}
-            <section className="container mx-auto px-6 max-w-5xl mb-20 mt-20">
-                <div className="bg-white rounded-3xl p-8 md:p-12 border border-stone-200 shadow-xl flex flex-col md:flex-row gap-12">
-
-                    {/* Garantía */}
-                    <div className="flex-1 space-y-6">
-                        <div className="flex items-center gap-3 mb-2">
-                            <ShieldCheck className="h-8 w-8 text-olive" />
-                            <h3 className="text-2xl font-serif text-stone-900">Garantía Total</h3>
-                        </div>
-                        <p className="text-stone-500 leading-relaxed">
-                            Su inversión está protegida. Si en los primeros 30 días detectamos algo que no funciona para su flujo de venta, lo ajustamos sin cargo.
-                        </p>
-                        <div className="flex gap-4 items-center text-sm font-bold text-stone-900">
-                            <span className="bg-stone-100 px-3 py-1 rounded">Soporte 3 Meses Gratis</span>
-                            <span className="bg-stone-100 px-3 py-1 rounded">Calibración 30 Días</span>
-                        </div>
+            {/* 7. MVP DELIVERY */}
+            <section className="container mx-auto px-6 max-w-4xl mb-20 mt-20">
+                <div className="bg-olive/5 rounded-3xl p-8 md:p-12 border border-olive/20 text-center">
+                    <div className="inline-block p-3 rounded-full bg-olive/10 text-olive mb-6">
+                        <Zap className="h-8 w-8" />
                     </div>
-
-                    <div className="w-px bg-stone-100 hidden md:block"></div>
-
-                    {/* Timeline */}
-                    <div className="flex-1 space-y-4">
-                        <div className="flex items-center gap-3 mb-2">
-                            <Clock className="h-8 w-8 text-stone-900" />
-                            <h3 className="text-2xl font-serif text-stone-900">Entrega en 21 Días</h3>
-                        </div>
-                        <p className="text-stone-500 text-sm">
-                            Semana 1: Diseño | Semana 2: Integración | <strong className="text-olive">Semana 3: Lanzamiento</strong>
-                        </p>
-                    </div>
-
+                    <h3 className="text-2xl md:text-3xl font-serif text-stone-900 mb-4">
+                        MVP funcional en <span className="text-olive">1 semana</span>
+                    </h3>
+                    <p className="text-stone-500 max-w-xl mx-auto leading-relaxed">
+                        Entregamos una primera versión funcional de tu sistema en solo 7 días para que puedas empezar a usarlo, probarlo y darnos feedback real.
+                    </p>
                 </div>
             </section>
 
