@@ -49,18 +49,37 @@ async function main() {
         const categoryId = catMap.get(p.category)
 
         if (categoryId) {
-            await prisma.product.create({
-                data: {
+            // Check if product exists to avoid duplicates and update image
+            const existingProduct = await prisma.product.findFirst({
+                where: {
                     name: p.name,
-                    price: p.price,
-                    image: p.image,
-                    isNew: p.isNew,
-                    categoryId: categoryId,
-                    stock: 50, // Default stock
-                    description: "Descripción simulada del producto..."
+                    categoryId: categoryId
                 }
             })
-            console.log(`Created product: ${p.name}`)
+
+            if (existingProduct) {
+                await prisma.product.update({
+                    where: { id: existingProduct.id },
+                    data: {
+                        image: p.image,
+                        price: p.price
+                    }
+                })
+                console.log(`Updated product: ${p.name}`)
+            } else {
+                await prisma.product.create({
+                    data: {
+                        name: p.name,
+                        price: p.price,
+                        image: p.image,
+                        isNew: p.isNew,
+                        categoryId: categoryId,
+                        stock: 50, // Default stock
+                        description: "Descripción simulada del producto..."
+                    }
+                })
+                console.log(`Created product: ${p.name}`)
+            }
         }
     }
 
